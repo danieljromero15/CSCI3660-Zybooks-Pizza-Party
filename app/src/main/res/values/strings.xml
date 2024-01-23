@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Pizza Party</string>
 
-
+    <string name="no_selection_error">Please let us know how hungry they are!</string>
+    <string name="total">Total pizzas: %1$d</string>
 </resources>
