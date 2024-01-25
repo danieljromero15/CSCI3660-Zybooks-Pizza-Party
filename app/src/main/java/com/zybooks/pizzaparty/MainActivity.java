@@ -13,9 +13,7 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
-
     public final int SLICES_PER_PIZZA = 8;
-
     private EditText mNumAttendEditText;
     private TextView mNumPizzasTextView;
     private RadioGroup mHowHungryRadioGroup;
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         int totalPizzas = (int) Math.ceil(numAttend * slicesPerPerson /
                 (double) SLICES_PER_PIZZA);
-        Log.d(TAG, getString(R.string.total, totalPizzas));
-        mNumPizzasTextView.setText(getString(R.string.total, totalPizzas));
+        Log.d(TAG, getString(R.string.total_pizzas, totalPizzas));
+        mNumPizzasTextView.setText(getString(R.string.total_pizzas, totalPizzas));
     }
 }
