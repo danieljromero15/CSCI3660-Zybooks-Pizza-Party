@@ -1,5 +1,6 @@
 package com.zybooks.pizzaparty;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -7,6 +8,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
 
 import android.util.Log;
 
@@ -22,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Drawable background = AppCompatResources.getDrawable(getApplicationContext(), R.drawable.jarjar);
+        if (background != null) {
+            background.setAlpha(50);
+        }
+        findViewById(R.id.activity_main).setBackground(background);
 
         Log.d(TAG, "onCreate was called");
 
