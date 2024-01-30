@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         Drawable background = AppCompatResources.getDrawable(getApplicationContext(), R.drawable.jarjar);
         if (background != null) {
-            background.setAlpha(50);
+            background.setAlpha(5);
         }
         findViewById(R.id.activity_main).setBackground(background);
 

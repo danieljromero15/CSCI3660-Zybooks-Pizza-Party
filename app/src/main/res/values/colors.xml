@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_blue">#00008B</color>
     <color name="blue">#0000FF</color>
+    <color name="pizza_red">#dc143b</color>
+    <color name="background_beige">#fcf8c8</color>
 </resources>
