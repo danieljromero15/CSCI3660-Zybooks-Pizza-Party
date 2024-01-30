@@ -3,14 +3,13 @@
 
     <string name="numPeople">Number of people?</string>
     <string name="howHungry">How hungry?</string>
-    <string name="no_selection_error">Please let us know how hungry they are!</string>
 
     <string name="light">Light</string>
     <string name="medium">Medium</string>
     <string name="ravenous">Ravenous</string>
 
     <string name="default_total_pizzas">Total pizzas: ?</string>
-    <string name="total_pizzas">Total pizzas: %1$d</string>
+    <string name="total_pizzas_num">Total pizzas: %d</string>
 
     <string name="calculate">Calculate</string>
 </resources>

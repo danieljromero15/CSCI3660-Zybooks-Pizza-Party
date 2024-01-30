@@ -15,7 +15,6 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
-    public final int SLICES_PER_PIZZA = 8;
     private EditText mNumAttendEditText;
     private TextView mNumPizzasTextView;
     private RadioGroup mHowHungryRadioGroup;
@@ -39,32 +38,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculateClick(View view) {
-        String numAttendStr = mNumAttendEditText.getText().toString();
-        Log.d(TAG, "Number is " + numAttendStr);
+        // Get how many are attending the party
         int numAttend;
         try {
+            String numAttendStr = mNumAttendEditText.getText().toString();
             numAttend = Integer.parseInt(numAttendStr);
-        } catch (NumberFormatException e){
+        }
+        catch (NumberFormatException ex) {
             numAttend = 0;
         }
 
-        // Determine how many slices on average each person will eat
-        int slicesPerPerson;
+        // Get hunger level selection
         int checkedId = mHowHungryRadioGroup.getCheckedRadioButtonId();
+        PizzaCalculator.HungerLevel hungerLevel = PizzaCalculator.HungerLevel.RAVENOUS;
         if (checkedId == R.id.light_radio_button) {
-            slicesPerPerson = 2;
-        } else if (checkedId == R.id.medium_radio_button) {
-            slicesPerPerson = 3;
-        } else if (checkedId == R.id.ravenous_radio_button) {
-            slicesPerPerson = 4;
-        } else {
-            mNumPizzasTextView.setText(getString(R.string.no_selection_error)); // Please let us know how hungry they are!
-            return;
+            hungerLevel = PizzaCalculator.HungerLevel.LIGHT;
+        }
+        else if (checkedId == R.id.medium_radio_button) {
+            hungerLevel = PizzaCalculator.HungerLevel.MEDIUM;
         }
 
-        int totalPizzas = (int) Math.ceil(numAttend * slicesPerPerson /
-                (double) SLICES_PER_PIZZA);
-        Log.d(TAG, getString(R.string.total_pizzas, totalPizzas));
-        mNumPizzasTextView.setText(getString(R.string.total_pizzas, totalPizzas));
+        // Get the number of pizzas needed
+        PizzaCalculator calc = new PizzaCalculator(numAttend, hungerLevel);
+        int totalPizzas = calc.getTotalPizzas();
+
+        // Place totalPizzas into the string resource and display
+        String totalText = getString(R.string.total_pizzas_num, totalPizzas);
+        mNumPizzasTextView.setText(totalText);
     }
 }
