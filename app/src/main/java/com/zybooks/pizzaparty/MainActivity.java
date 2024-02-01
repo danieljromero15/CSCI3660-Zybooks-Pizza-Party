@@ -35,6 +35,23 @@ public class MainActivity extends AppCompatActivity {
         mNumAttendEditText = findViewById(R.id.num_attend_edit_text);
         mNumPizzasTextView = findViewById(R.id.num_pizzas_text_view);
         mHowHungryRadioGroup = findViewById(R.id.hungry_radio_group);
+
+        /*mNumAttendEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });*/
     }
 
     public void calculateClick(View view) {
@@ -43,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             String numAttendStr = mNumAttendEditText.getText().toString();
             numAttend = Integer.parseInt(numAttendStr);
-        }
-        catch (NumberFormatException ex) {
+        } catch (NumberFormatException ex) {
             numAttend = 0;
         }
 
@@ -53,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
         PizzaCalculator.HungerLevel hungerLevel = PizzaCalculator.HungerLevel.RAVENOUS;
         if (checkedId == R.id.light_radio_button) {
             hungerLevel = PizzaCalculator.HungerLevel.LIGHT;
-        }
-        else if (checkedId == R.id.medium_radio_button) {
+        } else if (checkedId == R.id.medium_radio_button) {
             hungerLevel = PizzaCalculator.HungerLevel.MEDIUM;
         }
 
