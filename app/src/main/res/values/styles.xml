@@ -1,7 +1,8 @@
 <resources>
     <style name="CalcButton">
         <item name="android:textSize">24sp</item>
-        <item name="android:backgroundTint">@color/pizza_red</item>
-        <item name="android:textColor">@color/white</item>
+        <!--<item name="android:backgroundTint">@color/pizza_red</item>
+        <item name="android:textColor">@color/white</item>-->
+        <item name="android:textColor">@color/gray</item>
     </style>
 </resources>

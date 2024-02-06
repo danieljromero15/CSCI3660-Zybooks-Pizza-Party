@@ -58,22 +58,19 @@
             android:id="@+id/light_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/light"
-            android:textColor="@color/black" />
+            android:text="@string/light" />
 
         <RadioButton
             android:id="@+id/medium_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/medium"
-            android:textColor="@color/black" />
+            android:text="@string/medium" />
 
         <RadioButton
             android:id="@+id/ravenous_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ravenous"
-            android:textColor="@color/black" />
+            android:text="@string/ravenous" />
     </RadioGroup>
 
     <TextView

@@ -3,8 +3,9 @@
     <style name="Base.Theme.PizzaParty" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-        <item name="android:colorBackground">@color/background_beige</item>
+
+        <!--<item name="android:colorBackground">@color/background_beige</item>
         <item name="android:colorPrimaryDark">@color/pizza_red</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black</item> -->
     </style>
 </resources>
