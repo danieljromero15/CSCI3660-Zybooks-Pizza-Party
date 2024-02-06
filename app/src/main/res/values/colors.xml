@@ -6,4 +6,5 @@
     <color name="blue">#0000FF</color>
     <color name="pizza_red">#dc143b</color>
     <color name="background_beige">#fcf8c8</color>
+    <color name="gray">#AAA</color>
 </resources>
